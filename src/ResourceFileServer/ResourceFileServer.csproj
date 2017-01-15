@@ -1,5 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web" ToolsVersion="15.0">
-
+﻿<Project Sdk="Microsoft.NET.Sdk.Web" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
@@ -8,13 +7,6 @@
     <UserSecretsId>aspnet-WebApp_Auth-96d521e3-30ac-4a8f-967f-abc243174dce</UserSecretsId>
     <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="wwwroot;Views;Areas\**\Views;appsettings.json;web.config">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.App" Version="1.1.0" />
     <PackageReference Include="IdentityServer4.AccessTokenValidation">
@@ -69,22 +61,31 @@
       <Version>14.1.0</Version>
     </PackageReference>
   </ItemGroup>
-
   <ItemGroup>
     <DotNetCliToolReference Include="BundlerMinifier.Core">
       <Version>2.2.301</Version>
     </DotNetCliToolReference>
   </ItemGroup>
-
+  <ItemGroup>
+    <Content Update=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </Content>
+    <Content Update="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </Content>
+    <Content Update="docker-compose.vs.debug.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </Content>
+    <Content Update="docker-compose.vs.release.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </Content>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
   </PropertyGroup>
-
   <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish" Condition=" '$(IsCrossTargetingBuild)' != 'true' ">
     <Exec Command="bower install" />
     <Exec Command="dotnet bundle" />
   </Target>
-
   <Target Name="PostpublishScript" AfterTargets="Publish" Condition=" '$(IsCrossTargetingBuild)' != 'true' " />
-
 </Project>

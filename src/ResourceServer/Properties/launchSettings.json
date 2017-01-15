@@ -21,6 +21,10 @@
       "environmentVariables": {
         "Hosting:Environment": "Development"
       }
+    },
+    "Docker": {
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:{ServicePort}/https://localhost:44390/api/DataEventRecords"
     }
   }
 }

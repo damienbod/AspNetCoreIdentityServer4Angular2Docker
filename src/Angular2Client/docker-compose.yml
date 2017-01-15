@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  angular2client:
+    image: angular2client
+    build:
+      context: .
+      dockerfile: Dockerfile

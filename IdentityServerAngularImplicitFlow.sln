@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26020.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A0F6C07F-188D-4F86-B43F-4A3EAD0D2C30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{68FE7151-CB27-498E-8FC3-DB0EB76BED8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceServer", "src\ResourceServer\ResourceServer.csproj", "{27CE53A6-EEEF-4CC8-A463-6915A5F3AFEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angular2Client", "src\Angular2Client\Angular2Client.csproj", "{1C83BAC6-1A38-4261-8BE4-7B0FC9A286B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceFileServer", "src\ResourceFileServer\ResourceFileServer.csproj", "{3F42D8EE-5E25-443D-8EDD-FA950E63A1D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerWithIdentitySQLite", "src\IdentityServerWithIdentitySQLite\IdentityServerWithIdentitySQLite.csproj", "{1ECB5581-FFA5-4C11-A491-C85ABD962033}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27CE53A6-EEEF-4CC8-A463-6915A5F3AFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CE53A6-EEEF-4CC8-A463-6915A5F3AFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CE53A6-EEEF-4CC8-A463-6915A5F3AFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CE53A6-EEEF-4CC8-A463-6915A5F3AFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C83BAC6-1A38-4261-8BE4-7B0FC9A286B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C83BAC6-1A38-4261-8BE4-7B0FC9A286B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C83BAC6-1A38-4261-8BE4-7B0FC9A286B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C83BAC6-1A38-4261-8BE4-7B0FC9A286B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F42D8EE-5E25-443D-8EDD-FA950E63A1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F42D8EE-5E25-443D-8EDD-FA950E63A1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F42D8EE-5E25-443D-8EDD-FA950E63A1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F42D8EE-5E25-443D-8EDD-FA950E63A1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ECB5581-FFA5-4C11-A491-C85ABD962033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECB5581-FFA5-4C11-A491-C85ABD962033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECB5581-FFA5-4C11-A491-C85ABD962033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECB5581-FFA5-4C11-A491-C85ABD962033}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27CE53A6-EEEF-4CC8-A463-6915A5F3AFEA} = {A0F6C07F-188D-4F86-B43F-4A3EAD0D2C30}
+		{1C83BAC6-1A38-4261-8BE4-7B0FC9A286B8} = {A0F6C07F-188D-4F86-B43F-4A3EAD0D2C30}
+		{3F42D8EE-5E25-443D-8EDD-FA950E63A1D3} = {A0F6C07F-188D-4F86-B43F-4A3EAD0D2C30}
+		{1ECB5581-FFA5-4C11-A491-C85ABD962033} = {A0F6C07F-188D-4F86-B43F-4A3EAD0D2C30}
+	EndGlobalSection
+EndGlobal

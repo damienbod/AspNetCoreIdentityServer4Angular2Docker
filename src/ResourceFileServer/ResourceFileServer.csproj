@@ -57,11 +57,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <DotNetCliToolReference Include="BundlerMinifier.Core">
-      <Version>2.2.301</Version>
-    </DotNetCliToolReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Update=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
     </Content>

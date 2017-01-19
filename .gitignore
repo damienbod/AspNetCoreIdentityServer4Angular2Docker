@@ -213,3 +213,6 @@ src/ResourceServer/ResourceServer.csproj.user
 src/IdentityServerWithIdentitySQLite/wwwroot
 src/IdentityServerWithIdentitySQLite/wwwroot
 src/IdentityServerWithIdentitySQLite/wwwroot
+src/Angular2Client/angular2App/app/dataeventrecords/models/DataEventRecord.js.map
+src/Angular2Client/angular2App/main.js
+src/Angular2Client/angular2App/main.js.map

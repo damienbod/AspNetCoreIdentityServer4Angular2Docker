@@ -66,7 +66,12 @@
     },
 
     "frameworks": {
-        "net46": {}
+        "netcoreapp1.1": {
+            "imports": [
+                "dotnet5.6",
+                "portable-net45+win8"
+            ]
+        }
     },
 
     "buildOptions": {
@@ -84,14 +89,8 @@
         "include": [
             "wwwroot",
             "Views",
-            "Areas/**/Views",
             "appsettings.json",
             "web.config"
         ]
-    },
-
-    "scripts": {
-        "prepublish": [ "bower install", "dotnet bundle" ],
-        "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
     }
 }

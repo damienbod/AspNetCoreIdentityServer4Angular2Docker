@@ -26,11 +26,6 @@ namespace IdentityServerWithAspNetIdentitySqlite
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
-            if (env.IsDevelopment())
-            {
-                builder.AddUserSecrets();
-            }
-
             _environment = env;
 
             builder.AddEnvironmentVariables();

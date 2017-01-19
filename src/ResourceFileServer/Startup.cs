@@ -71,14 +71,17 @@ namespace ResourceFileServer
 
             app.UseStaticFiles();
 
-            IdentityServerAuthenticationOptions identityServerAuthenticationOptions = new IdentityServerAuthenticationOptions();
-            identityServerAuthenticationOptions.Authority = "http://localhost:5010/";
-            identityServerAuthenticationOptions.AllowedScopes = new List<string> { "securedFiles" };
-            identityServerAuthenticationOptions.ApiSecret = "securedFilesSecret";
-            identityServerAuthenticationOptions.ApiName = "securedFiles";
-            identityServerAuthenticationOptions.AutomaticAuthenticate = true;
-            // required if you want to return a 403 and not a 401 for forbidden responses
-            identityServerAuthenticationOptions.AutomaticChallenge = true;
+            IdentityServerAuthenticationOptions identityServerAuthenticationOptions = new IdentityServerAuthenticationOptions
+            {
+                Authority = "http://localhost:5010/",
+                AllowedScopes = new List<string> { "securedFiles" },
+                ApiSecret = "securedFilesSecret",
+                ApiName = "securedFiles",
+                RequireHttpsMetadata = false,
+                AutomaticAuthenticate = true,
+                // required if you want to return a 403 and not a 401 for forbidden responses
+                AutomaticChallenge = true
+            };
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             app.UseIdentityServerAuthentication(identityServerAuthenticationOptions);

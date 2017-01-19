@@ -102,6 +102,7 @@ namespace AspNet5SQLite
                 ApiName = "dataEventRecords",
                 AutomaticAuthenticate = true,
                 SupportedTokens = SupportedTokens.Both,
+                RequireHttpsMetadata =false,
                 // TokenRetriever = _tokenRetriever,
                 // required if you want to return a 403 and not a 401 for forbidden responses
                 AutomaticChallenge = true,                

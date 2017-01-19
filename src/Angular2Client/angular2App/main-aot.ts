@@ -1,6 +1,6 @@
 ﻿// Entry point for AoT compilation.
-
-declare var System: any;
+export * from './polyfills';
+export * from './vendor';
 
 import { platformBrowser } from '@angular/platform-browser';
 import { enableProdMode } from '@angular/core';

@@ -13,14 +13,12 @@ module.exports = {
 
     entry: {
         'vendor': './angular2App/vendor.ts',
-        'polyfills': './angular2App/polyfills.ts',
         'app': './angular2App/main-aot.ts' // AoT compilation
     },
 
     output: {
         path: './wwwroot/',
         filename: 'dist/[name].[hash].bundle.js',
-        chunkFilename: 'dist/[id].[hash].chunk.js',
         publicPath: '/'
     },
 
@@ -39,8 +37,7 @@ module.exports = {
             {
                 test: /\.ts$/,
                 loaders: [
-                    'awesome-typescript-loader',
-                    'angular-router-loader?aot=true&genDir=aot/'
+                    'awesome-typescript-loader'
                 ]
             },
             {
@@ -75,7 +72,7 @@ module.exports = {
                 './wwwroot/assets'
             ]
         ),
-        new webpack.NoEmitOnErrorsPlugin(),
+        new webpack.NoErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
@@ -87,7 +84,7 @@ module.exports = {
         }),
         new webpack.optimize.CommonsChunkPlugin(
             {
-                name: ['vendor', 'polyfills']
+                name: ['vendor']
             }),
 
         new HtmlWebpackPlugin({

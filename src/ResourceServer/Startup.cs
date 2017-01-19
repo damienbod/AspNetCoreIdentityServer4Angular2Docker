@@ -96,7 +96,7 @@ namespace AspNet5SQLite
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             IdentityServerAuthenticationOptions identityServerValidationOptions = new IdentityServerAuthenticationOptions
             {
-                Authority = "https://localhost:44318/",
+                Authority = "http://localhost:5010/",
                 AllowedScopes = new List<string> { "dataEventRecords" },
                 ApiSecret = "dataEventRecordsSecret",
                 ApiName = "dataEventRecords",

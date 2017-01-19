@@ -210,3 +210,6 @@ src/ResourceServer/Keys
 src/ResourceWithIdentityServerWithClient/wwwroot/_references.js
 src/ResourceServer/ResourceServer.csproj.user
 .vs
+src/IdentityServerWithIdentitySQLite/wwwroot
+src/IdentityServerWithIdentitySQLite/wwwroot
+src/IdentityServerWithIdentitySQLite/wwwroot

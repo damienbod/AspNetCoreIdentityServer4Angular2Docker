@@ -69,35 +69,6 @@ namespace QuickstartIdentityServer
             {
                 new Client
                 {
-                    ClientName = "angularclient",
-                    ClientId = "angularclient",
-                    AllowedGrantTypes = GrantTypes.Implicit,
-                    AllowAccessTokensViaBrowser = true,
-                    RedirectUris = new List<string>
-                    {
-                        "https://localhost:44347/authorized"
-                    },
-                    PostLogoutRedirectUris = new List<string>
-                    {
-                        "https://localhost:44347/unauthorized.html"
-                    },
-                    AllowedCorsOrigins = new List<string>
-                    {
-                        "https://localhost:44347"
-                    },
-                    AllowedScopes = new List<string>
-                    {
-                        "openid",
-                        "email",
-                        "profile",
-                        "dataEventRecords",
-                        "dataeventrecordsscope",
-                        "securedFiles",
-                        "securedfilesscope",
-                    }
-                },
-                new Client
-                {
                     ClientName = "angular2client",
                     ClientId = "angular2client",
                     AccessTokenType = AccessTokenType.Reference,
@@ -106,17 +77,17 @@ namespace QuickstartIdentityServer
                     AllowAccessTokensViaBrowser = true,
                     RedirectUris = new List<string>
                     {
-                        "https://localhost:44311"
+                        "http://localhost:5013"
 
                     },
                     PostLogoutRedirectUris = new List<string>
                     {
-                        "https://localhost:44311/Unauthorized"
+                        "http://localhost:5013/Unauthorized"
                     },
                     AllowedCorsOrigins = new List<string>
                     {
-                        "https://localhost:44311",
-                        "http://localhost:44311"
+                        "http://localhost:5013",
+                        "http://localhost:5013"
                     },
                     AllowedScopes = new List<string>
                     {

@@ -3,7 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:5012/"
+      "applicationUrl": "https://localhost:44378/",
+      "sslPort": 44378
     }
   },
   "profiles": {
@@ -20,10 +21,6 @@
       "environmentVariables": {
         "Hosting:Environment": "Development"
       }
-    },
-    "Docker": {
-      "launchBrowser": true,
-      "launchUrl": "http://localhost:{ServicePort}/api/download"
     }
   }
 }

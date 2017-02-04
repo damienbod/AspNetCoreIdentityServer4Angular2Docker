@@ -82,9 +82,9 @@ export class SecurityService {
 
         console.log('BEGIN Authorize, no auth data');
 
-        let authorizationUrl = 'http://localhost:5010/connect/authorize';
+        let authorizationUrl = 'https://localhost:44318/connect/authorize';
         let client_id = 'angular2client';
-        let redirect_uri = 'http://localhost:5013';
+        let redirect_uri = 'https://localhost:44311';
         let response_type = 'id_token token';
         let scope = 'dataEventRecords securedFiles openid';
         let nonce = 'N' + Math.random() + '' + Date.now();
@@ -162,13 +162,13 @@ export class SecurityService {
     }
 
     public Logoff() {
-        // /connect/endsession?id_token_hint=...&post_logout_redirect_uri=http://myapp.com
+        // /connect/endsession?id_token_hint=...&post_logout_redirect_uri=https://myapp.com
         console.log('BEGIN Authorize, no auth data');
 
-        let authorizationUrl = 'http://localhost:5010/connect/endsession';
+        let authorizationUrl = 'https://localhost:44318/connect/endsession';
 
         let id_token_hint = this.retrieve('authorizationDataIdToken');
-        let post_logout_redirect_uri = 'http://localhost:5013/Unauthorized';
+        let post_logout_redirect_uri = 'https://localhost:44311/Unauthorized';
 
         let url =
             authorizationUrl + '?' +
@@ -234,7 +234,7 @@ export class SecurityService {
 
     private getUserData = (): Observable<string[]> => {
         this.setHeaders();
-        return this._http.get('http://localhost:5010/connect/userinfo', {
+        return this._http.get('https://localhost:44318/connect/userinfo', {
             headers: this.headers,
             body: ''
         }).map(res => res.json());

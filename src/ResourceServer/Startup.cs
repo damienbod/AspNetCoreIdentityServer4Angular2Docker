@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.DataProtection;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +39,13 @@ namespace AspNet5SQLite
             var folderForKeyStore = Configuration["Production:KeyStoreFolderWhichIsBacked"];
           
             var cert = new X509Certificate2(Path.Combine(_env.ContentRootPath, "damienbodserver.pfx"), "");
+
+            // Important The folderForKeyStore needs to be backed up.
+            services.AddDataProtection()
+                .SetApplicationName("AspNet5IdentityServerAngularImplicitFlow")
+                .PersistKeysToFileSystem(new DirectoryInfo(folderForKeyStore))
+                .ProtectKeysWithCertificate(cert);
+
 
             services.AddDbContext<DataEventRecordContext>(options =>
                 options.UseSqlite(connection)
@@ -96,13 +104,12 @@ namespace AspNet5SQLite
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             IdentityServerAuthenticationOptions identityServerValidationOptions = new IdentityServerAuthenticationOptions
             {
-                Authority = "http://localhost:5010/",
+                Authority = "https://localhost:44318/",
                 AllowedScopes = new List<string> { "dataEventRecords" },
                 ApiSecret = "dataEventRecordsSecret",
                 ApiName = "dataEventRecords",
                 AutomaticAuthenticate = true,
                 SupportedTokens = SupportedTokens.Both,
-                RequireHttpsMetadata =false,
                 // TokenRetriever = _tokenRetriever,
                 // required if you want to return a 403 and not a 401 for forbidden responses
                 AutomaticChallenge = true,                

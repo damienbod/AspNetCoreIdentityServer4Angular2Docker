@@ -3,7 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:5013/"
+      "applicationUrl": "https://localhost:44311/",
+      "sslPort": 44311
     }
   },
   "profiles": {
@@ -19,10 +20,6 @@
       "environmentVariables": {
         "Hosting:Environment": "Development"
       }
-    },
-    "Docker": {
-      "launchBrowser": true,
-      "launchUrl": "http://localhost:{ServicePort}"
     }
   }
 }

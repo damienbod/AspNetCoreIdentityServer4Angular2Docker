@@ -1,8 +1,0 @@
-version: '2.1'
-
-services:
-  identityserverwithidentitysqlite:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "80"

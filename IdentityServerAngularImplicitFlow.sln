@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceFileServer", "src\R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerWithIdentitySQLite", "src\IdentityServerWithIdentitySQLite\IdentityServerWithIdentitySQLite.csproj", "{1ECB5581-FFA5-4C11-A491-C85ABD962033}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0A2C7E3B-C4C9-433C-B97F-184DA355B9E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{1ECB5581-FFA5-4C11-A491-C85ABD962033}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ECB5581-FFA5-4C11-A491-C85ABD962033}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ECB5581-FFA5-4C11-A491-C85ABD962033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2C7E3B-C4C9-433C-B97F-184DA355B9E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2C7E3B-C4C9-433C-B97F-184DA355B9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2C7E3B-C4C9-433C-B97F-184DA355B9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2C7E3B-C4C9-433C-B97F-184DA355B9E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

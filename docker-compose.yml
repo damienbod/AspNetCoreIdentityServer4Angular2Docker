@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  identityserverwithidentitysqlite:
+    image: identityserverwithidentitysqlite
+    build:
+      context: ./src/IdentityServerWithIdentitySQLite
+      dockerfile: Dockerfile
+
+  resourcefileserver:
+    image: resourcefileserver
+    build:
+      context: ./src/ResourceFileServer
+      dockerfile: Dockerfile
+
+  resourceserver:
+    image: resourceserver
+    build:
+      context: ./src/ResourceServer
+      dockerfile: Dockerfile
+
+  angular2client:
+    image: angular2client
+    build:
+      context: ./src/Angular2Client
+      dockerfile: Dockerfile
